@@ -1,0 +1,20 @@
+14:38:11 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     978 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:38:11 Build Finished. 0 errors, 0 warnings. (took 139ms)
+

@@ -1,0 +1,243 @@
+14:37:41 **** Build of configuration Debug for project UART_driver_LCD_display_MCU1 ****
+make all 
+Building file: ../MCU1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCU1.d" -MT"MCU1.o" -c -o "MCU1.o" "../MCU1.c"
+../MCU1.c: In function 'main':
+../MCU1.c:24: warning: pointer targets in passing argument 1 of 'UART_sendString' differ in signedness
+../MCU1.c:17: warning: unused variable 'data'
+../MCU1.c:16: warning: unused variable 'Str'
+Finished building: ../MCU1.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: UART_driver_LCD_display_MCU1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART_driver_LCD_display_MCU1.map -mmcu=atmega32 -o "UART_driver_LCD_display_MCU1.elf"  ./MCU1.o ./uart.o   
+Finished building target: UART_driver_LCD_display_MCU1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART_driver_LCD_display_MCU1.elf  >"UART_driver_LCD_display_MCU1.lss"
+Finished building: UART_driver_LCD_display_MCU1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     978 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:37:41 **** Build of configuration Debug for project UART_driver_LCD_display_MCU2 ****
+make all 
+Building file: ../MCU2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCU2.d" -MT"MCU2.o" -c -o "MCU2.o" "../MCU2.c"
+../MCU2.c: In function 'main':
+../MCU2.c:16: warning: unused variable 'data'
+Finished building: ../MCU2.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c:14:90: error: Atmega32_Regs.h: No such file or directory
+../gpio.c: In function 'GPIO_setupPinDirection':
+../gpio.c:40: error: 'DDRA_REG' undeclared (first use in this function)
+../gpio.c:40: error: (Each undeclared identifier is reported only once
+../gpio.c:40: error: for each function it appears in.)
+../gpio.c:50: error: 'DDRB_REG' undeclared (first use in this function)
+../gpio.c:60: error: 'DDRC_REG' undeclared (first use in this function)
+../gpio.c:70: error: 'DDRD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_writePin':
+../gpio.c:101: error: 'PORTA_REG' undeclared (first use in this function)
+../gpio.c:111: error: 'PORTB_REG' undeclared (first use in this function)
+../gpio.c:121: error: 'PORTC_REG' undeclared (first use in this function)
+../gpio.c:131: error: 'PORTD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:166: error: 'PINA_REG' undeclared (first use in this function)
+../gpio.c:176: error: 'PINB_REG' undeclared (first use in this function)
+../gpio.c:186: error: 'PINC_REG' undeclared (first use in this function)
+../gpio.c:196: error: 'PIND_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_setupPortDirection':
+../gpio.c:234: error: 'DDRA_REG' undeclared (first use in this function)
+../gpio.c:237: error: 'DDRB_REG' undeclared (first use in this function)
+../gpio.c:240: error: 'DDRC_REG' undeclared (first use in this function)
+../gpio.c:243: error: 'DDRD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_writePort':
+../gpio.c:268: error: 'PORTA_REG' undeclared (first use in this function)
+../gpio.c:271: error: 'PORTB_REG' undeclared (first use in this function)
+../gpio.c:274: error: 'PORTC_REG' undeclared (first use in this function)
+../gpio.c:277: error: 'PORTD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:307: error: 'PINA_REG' undeclared (first use in this function)
+../gpio.c:310: error: 'PINB_REG' undeclared (first use in this function)
+../gpio.c:313: error: 'PINC_REG' undeclared (first use in this function)
+../gpio.c:316: error: 'PIND_REG' undeclared (first use in this function)
+make: *** [gpio.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:37:44 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     978 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:37:45 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU2 ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+../gpio.c:14:90: error: Atmega32_Regs.h: No such file or directory
+../gpio.c: In function 'GPIO_setupPinDirection':
+../gpio.c:40: error: 'DDRA_REG' undeclared (first use in this function)
+../gpio.c:40: error: (Each undeclared identifier is reported only once
+../gpio.c:40: error: for each function it appears in.)
+../gpio.c:50: error: 'DDRB_REG' undeclared (first use in this function)
+../gpio.c:60: error: 'DDRC_REG' undeclared (first use in this function)
+../gpio.c:70: error: 'DDRD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_writePin':
+../gpio.c:101: error: 'PORTA_REG' undeclared (first use in this function)
+../gpio.c:111: error: 'PORTB_REG' undeclared (first use in this function)
+../gpio.c:121: error: 'PORTC_REG' undeclared (first use in this function)
+../gpio.c:131: error: 'PORTD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_readPin':
+../gpio.c:166: error: 'PINA_REG' undeclared (first use in this function)
+../gpio.c:176: error: 'PINB_REG' undeclared (first use in this function)
+../gpio.c:186: error: 'PINC_REG' undeclared (first use in this function)
+../gpio.c:196: error: 'PIND_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_setupPortDirection':
+../gpio.c:234: error: 'DDRA_REG' undeclared (first use in this function)
+../gpio.c:237: error: 'DDRB_REG' undeclared (first use in this function)
+../gpio.c:240: error: 'DDRC_REG' undeclared (first use in this function)
+../gpio.c:243: error: 'DDRD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_writePort':
+../gpio.c:268: error: 'PORTA_REG' undeclared (first use in this function)
+../gpio.c:271: error: 'PORTB_REG' undeclared (first use in this function)
+../gpio.c:274: error: 'PORTC_REG' undeclared (first use in this function)
+../gpio.c:277: error: 'PORTD_REG' undeclared (first use in this function)
+../gpio.c: In function 'GPIO_readPort':
+../gpio.c:307: error: 'PINA_REG' undeclared (first use in this function)
+../gpio.c:310: error: 'PINB_REG' undeclared (first use in this function)
+../gpio.c:313: error: 'PINC_REG' undeclared (first use in this function)
+../gpio.c:316: error: 'PIND_REG' undeclared (first use in this function)
+make: *** [gpio.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:38:07 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     978 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:38:08 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU2 ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_displayStringRowColumn':
+../lcd.c:234: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:247: warning: implicit declaration of function 'itoa'
+../lcd.c:249: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../lcd.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: UART_driver_LCD_display_MCU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART_driver_LCD_display_MCU2.map -mmcu=atmega32 -o "UART_driver_LCD_display_MCU2.elf"  ./MCU2.o ./gpio.o ./lcd.o ./uart.o   
+Finished building target: UART_driver_LCD_display_MCU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART_driver_LCD_display_MCU2.elf  >"UART_driver_LCD_display_MCU2.lss"
+Finished building: UART_driver_LCD_display_MCU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8506 bytes (26.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:38:11 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     978 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:38:11 **** Incremental Build of configuration Debug for project UART_driver_LCD_display_MCU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_driver_LCD_display_MCU2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8506 bytes (26.0% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
